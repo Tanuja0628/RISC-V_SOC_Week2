@@ -118,6 +118,7 @@ show vsdbabysoc
 ```
 
 ✔ Produces gate-level netlist → reports/vsdbabysoc_netlist.v
+![Yosys_simulation](assets/vsdbabysoc_yosys_show.jpg)
 
 ### 3. Gate-Level Simulation (GLS)
 <!-- Post-synthesis verification -->
@@ -131,6 +132,7 @@ gtkwave dump.vcd
 ```
 
 ✔ GLS waveform = RTL waveform → functional equivalence verified.
+![Postsynthesis_simulation](assets/post_synth_simulation.jpg)
 
 ---
 ## 📊 Results
