@@ -44,8 +44,8 @@ This generates rvmyth.v, which is used in synthesis and simulation.
 Run RTL simulation with Icarus Verilog:
 
 ```bash
-iverilog -o simulation/pre_synth_sim.out -DPRE_SYNTH_SIM src/module/testbench.v -I src/include -I src/module
-cd simulation
+iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM src/module/testbench.v -I src/include -I src/module
+cd output/pre_synth_sim
 ./pre_synth_sim.out
 gtkwave pre_synth_sim.vcd
 ```
@@ -112,12 +112,12 @@ flatten
 setundef -zero
 clean -purge
 rename -enumerate
-write_verilog -noattr reports/vsdbabysoc_netlist.v
+write_verilog -noattr VSDBabySoC/src/module/vsdbabysoc_netlist.v
 stat -liberty src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show vsdbabysoc
 ```
 
-✔ Produces gate-level netlist → reports/vsdbabysoc_netlist.v
+✔ Produces gate-level netlist → reportsVSDBabySoC/src/module/vsdbabysoc_netlist.v
 ![Yosys_simulation](assets/vsdbabysoc_yosys_show.jpg)
 
 ### 3. Gate-Level Simulation (GLS)
@@ -126,7 +126,7 @@ Simulate synthesized netlist:
 
 ```bash
 iverilog -DFUNCTIONAL -DUNIT_DELAY=#1   -I src/gls_model   -o output/post_synth_sim/post_synth_sim.out   src/module/testbench.rvmyth.post-routing.v src/module/testbench.v  src/gls_model/primitives.v   src/gls_model/sky130_fd_sc_hd.v   output/synthesized/vsdbabysoc.synth.v   src/module/avsdpll.v   src/module/avsddac.v
-cd simulation
+cd output/post_synth_sim
 ./post_synth_sim.out
 gtkwave dump.vcd
 ```
