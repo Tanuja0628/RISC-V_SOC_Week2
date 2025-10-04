@@ -36,6 +36,7 @@ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --
 ```
 This generates rvmyth.v, which is used in synthesis and simulation.
 ![rvmyth_core](assets/output_rvmyth_core.jpg)
+
 ---
 ## 🖥️ Workflow
 ### 1. RTL Simulation (Pre-Synthesis)
@@ -50,6 +51,7 @@ gtkwave pre_synth_sim.vcd
 ```
 
 ✔ Confirms CPU writes to DAC & PLL locks properly.
+![Presynthesis_simulation](assets/pre_synth_simulation.jpg)
 
 ### 2. Synthesis with Yosys
 <!-- RTL -> Gate level -->
