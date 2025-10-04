@@ -116,6 +116,7 @@ write_verilog -noattr VSDBabySoC/src/module/vsdbabysoc_netlist.v
 stat -liberty src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show vsdbabysoc
 ```
+![Chip_statistics](assets/chip_statistics.jpg)
 
 ✔ Produces gate-level netlist → reportsVSDBabySoC/src/module/vsdbabysoc_netlist.v
 ![Yosys_simulation](assets/vsdbabysoc_yosys_show.jpg)
