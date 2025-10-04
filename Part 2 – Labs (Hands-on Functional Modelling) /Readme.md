@@ -1,7 +1,6 @@
 # BabySoC Functional Flow: From RTL to Gate-Level Verification  
 
-This repository captures the design and verification journey of the **VSD BabySoC** –  
-a small but complete System-on-Chip (SoC) built using open-source tools.  
+This repository captures the design and verification journey of the **VSD BabySoC** –  a small but complete System-on-Chip (SoC) built using open-source tools.  
 It integrates:  
 - `rvmyth` → a RISC-V CPU core  
 - `avsddac` → Digital-to-Analog Converter  
